@@ -8,6 +8,7 @@ import { createRoot } from 'react-dom/client'
 
 if (import.meta.env.VITE_NODE_ENV !== 'production') {
   liff.use(new LiffMockPlugin());
+  
   // https://github.com/line/liff-mock
 }
 
