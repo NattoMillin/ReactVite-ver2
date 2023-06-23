@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     // `root` からの相対パスで指定する
-    outDir: '../dist',
+    outDir: './dist',
   },
   envDir: './',
 })

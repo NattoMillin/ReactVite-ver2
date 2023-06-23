@@ -12,7 +12,7 @@ function App() {
   const opstion = {liffId: liffId, mock: mock}
 
   useEffect(() => {
-    liff
+  liff
     .init(opstion)
     .then(async () => {
       console.log("init collect")
@@ -21,10 +21,10 @@ function App() {
         await liff.login();
         console.log("login collect")
       }
-  })
-  .catch((e) => {
-    alert(`LIFF error: ${e.message}`)
-  })
+    })
+    .catch((e:Error) => {
+      alert(`LIFF error: ${e.message}`)
+    })
   }, [])
 
   return (
