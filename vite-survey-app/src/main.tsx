@@ -18,10 +18,15 @@ const opstion = {liffId: liffId, mock: mock}
 liff
   .init(opstion)
   .then(async () => {
+
+    console.log("init collect")
     if (!liff.isLoggedIn()) {
+      console.log("login start")
       await liff.login();
+      console.log("login collect")
     }
     const container = document.getElementById('root')
+    console.log("root find")
     if (!container) throw new Error('Failed to find the root element')
     createRoot(container).render(
       <React.StrictMode>
